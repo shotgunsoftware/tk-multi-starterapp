@@ -1,4 +1,4 @@
-# Welcome to the Shotgun Pipeline Toolkit Starter App
+# Welcome to the Shotgun Pipeline Toolkit Starter App!
 
 This app serves as a quick way to get started when doing Toolkit App development.
 If you want to get up and running quickly, follow these simple steps:
@@ -8,15 +8,18 @@ If you want to get up and running quickly, follow these simple steps:
 First of all, fork this repo. You can fork it to your own github accout or fork it to
 an internal git server, that's totally up to you! At this time, make sure you also 
 rename it to something sensible. We recommend the naming convention `tk-ENGINE-APPNAME`, 
-where ENGINE is set to `multi` if the app can run in more than one engine.
+where ENGINE is set to `multi` if the app can run in more than one engine. For example, 
+if you are working on a rigging tool in maya, you may want to name it `tk-maya-characterposer`.
 
 ## Step 2. Install your forked App in Toolkit
 
+### Create a Dev Area
 Now, first things first - before starting development, let's install the App. First, create a 
 development sandbox for your project by going to the pipeline configurations page in Shotgun
 and click select "Clone" on the menu when right clicking on the primary pipeline configuration.
 This will give you a private place to do development and you wont be disturbing the production.
 
+### Install the new repository
 With your development sandbox there will be a specific tank command that you can use to address
 this particular configuration. Open a shell and navigate to your sandbox. Now run the install app
 command. When you install an app, you need to choose an environment and an engine. The engine is
