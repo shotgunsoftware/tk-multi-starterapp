@@ -58,7 +58,7 @@ you would do the following:
 
 ```
 > cd /your/development/sandbox
-> ./tank switch_app shot_step tk-maya /Users/john.smith/dev/tk-multi-mynewapp
+> ./tank switch_app shot_step tk-maya tk-multi-mynewapp /Users/john.smith/dev/tk-multi-mynewapp
 ```
  
 ## Step 5. Make changes!
@@ -75,7 +75,7 @@ and use that - your dev area is no longer used by the system.
 
 ```
 > cd /your/development/sandbox
-> ./tank switch_app shot_step tk-maya user@remotehost:/path_to/tk-multi-mynewapp.git
+> ./tank switch_app shot_step tk-maya tk-multi-mynewapp user@remotehost:/path_to/tk-multi-mynewapp.git
 ```
 
 ## Step 7. Push your config changes to the production config
