@@ -1,0 +1,21 @@
+/********************************************************************************************
+
+QT Stylesheet for the app. This file will be read every time an app dialog is created via
+the show_dialog, show_modal or show_panel methods.
+
+Certain keywords will be resolved, for example {{SG_HIGHLIGHT_COLOR}}.
+For a full list of keywords, call the app.style_constants property at runtime.
+
+For more info about QT stylesheets, please see http://doc.qt.io/qt-4.8/stylesheet.html
+
+********************************************************************************************/
+
+
+/* Example:
+
+QListView, QTableView, QScrollArea {
+    border: 2px solid {{SG_HIGHLIGHT_COLOR}};
+}
+
+*/
+
