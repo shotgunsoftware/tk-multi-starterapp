@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-#      by: pyside-uic 0.2.13 running on PySide 1.1.0
+#      by: pyside-uic 0.2.15 running on PySide 1.2.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -19,21 +19,14 @@ class Ui_Dialog(object):
         self.logo_example.setPixmap(QtGui.QPixmap(":/res/sg_logo.png"))
         self.logo_example.setObjectName("logo_example")
         self.horizontalLayout.addWidget(self.logo_example)
-        self.context = QtGui.QLabel(Dialog)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.context.sizePolicy().hasHeightForWidth())
-        self.context.setSizePolicy(sizePolicy)
-        self.context.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.context.setObjectName("context")
-        self.horizontalLayout.addWidget(self.context)
+        self.view = QtGui.QListView(Dialog)
+        self.view.setObjectName("view")
+        self.horizontalLayout.addWidget(self.view)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "The Current Sgtk Environment", None, QtGui.QApplication.UnicodeUTF8))
-        self.context.setText(QtGui.QApplication.translate("Dialog", "Your Current Context: ", None, QtGui.QApplication.UnicodeUTF8))
 
 from . import resources_rc

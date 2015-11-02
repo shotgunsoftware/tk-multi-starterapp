@@ -18,19 +18,25 @@ import threading
 from sgtk.platform.qt import QtCore, QtGui
 from .ui.dialog import Ui_Dialog
 
+# Import the shotgun_model module from the shotgun utils framework.
+shotgun_model = sgtk.platform.import_framework("tk-framework-shotgunutils",
+                                               "shotgun_model")
+# Set up alias
+ShotgunModel = shotgun_model.ShotgunModel
+
+from .delegate_list_item import ListItemDelegate
+
 def show_dialog(app_instance):
     """
     Shows the main dialog window.
     """
     # in order to handle UIs seamlessly, each toolkit engine has methods for launching
     # different types of windows. By using these methods, your windows will be correctly
-    # decorated and handled in a consistent fashion by the system. 
-    
+    # decorated and handled in a consistent fashion by the system.
+
     # we pass the dialog class to this method and leave the actual construction
     # to be carried out by toolkit.
     app_instance.engine.show_dialog("Starter Template App...", app_instance, AppDialog)
-    
-
 
 class AppDialog(QtGui.QWidget):
     """
@@ -57,7 +63,17 @@ class AppDialog(QtGui.QWidget):
         # - A Shotgun API instance, via self._app.shotgun
         # - A tk API instance, via self._app.tk 
         
-        # lastly, set up our very basic UI
-        self.ui.context.setText("Current Context: %s" % self._app.context)
-        
-        
+        # setup our data backend
+        self._model = shotgun_model.SimpleShotgunModel(self)
+
+        # tell the view to pull data from the model
+        self.ui.view.setModel(self._model)
+
+        # load all assets from Shotgun
+        self._model.load_data(entity_type="Asset")
+
+        # setup a delegate
+        self._delegate = ListItemDelegate(self.ui.view)
+
+        # hook up delegate renderer with view
+        self.ui.view.setItemDelegate(self._delegate)

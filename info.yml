@@ -31,4 +31,5 @@ requires_engine_version:
 
 # the frameworks required to run this app
 frameworks:
-    
+    - {"name": "tk-framework-shotgunutils", "version": "v2.x.x"}
+    - {"name": "tk-framework-qtwidgets", "version": "v1.x.x"}
