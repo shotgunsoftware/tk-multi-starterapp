@@ -11,6 +11,8 @@ This repo has got several branches, illustrating slightly different workflows:
 - the `shotgun_multi_select` branch shows how to get started if you want to create
   a *shotgun specific* app where you can select multiple objects in Shotgun and 
   pass this selection into the app.
+- the `shotgun_model_delegate` branch illustrates how to use the Shotgun MVC model
+  for efficient data retrieval and the toolkit widget delegate system for display of content.
 
 ## Step 2. Fork this Repository!
 
