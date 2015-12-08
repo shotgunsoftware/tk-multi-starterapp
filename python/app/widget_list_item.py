@@ -35,14 +35,8 @@ class ListItemWidget(QtGui.QWidget):
         self.ui.setupUi(self)
 
         # keep predefined classes for each state of the widget
-        self._css_decorated = """
-            #box { border-width: 2px;
-                   border-radius: 4px;
-                   border-color: rgb(48, 167, 227);
-                   border-style: solid;
-            }
-            """
 
+        # style when the widget is selected
         self._css_selected = """
             #box { border-width: 2px;
                    border-radius: 4px;
@@ -52,7 +46,8 @@ class ListItemWidget(QtGui.QWidget):
             }
             """
 
-        self._no_style = """
+        # style when the widget is passive (not selected)
+        self._css_passive = """
             #box { border-width: 2px;
                    border-radius: 4px;
                    border-color: rgba(0, 0, 0, 0%);
@@ -68,19 +63,8 @@ class ListItemWidget(QtGui.QWidget):
 
         :param selected: True if selected, false if not
         """
-        if selected:
-            self.ui.box.setStyleSheet(self._css_selected)
-
-    def set_highlighted(self, highlighted):
-        """
-        Adjust the style sheet to indicate that an object is highlighted
-
-        :param selected: True if selected, false if not
-        """
-        if highlighted:
-            self.ui.box.setStyleSheet(self._css_decorated)
-        else:
-            self.ui.box.setStyleSheet(self._no_style)
+        css = self._css_selected if selected else self._css_passive
+        self.ui.box.setStyleSheet(css)
 
     def set_thumbnail(self, pixmap):
         """
