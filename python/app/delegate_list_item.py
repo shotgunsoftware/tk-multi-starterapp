@@ -15,7 +15,7 @@ from sgtk.platform.qt import QtCore, QtGui
 shotgun_model = sgtk.platform.import_framework("tk-framework-shotgunutils",
                                                "shotgun_model")
 shotgun_view = sgtk.platform.import_framework("tk-framework-qtwidgets",
-                                              "shotgun_view")
+                                              "views")
 
 from .widget_list_item import ListItemWidget
 
