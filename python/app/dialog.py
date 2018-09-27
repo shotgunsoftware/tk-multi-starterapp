@@ -55,7 +55,7 @@ class AppDialog(QtGui.QWidget):
         # via the self._app handle we can for example access:
         # - The engine, via self._app.engine
         # - A Shotgun API instance, via self._app.shotgun
-        # - A tk API instance, via self._app.tk 
+        # - An Sgtk API instance, via self._app.sgtk 
         
         # lastly, set up our very basic UI
         self.ui.context.setText("Current Context: %s" % self._app.context)
