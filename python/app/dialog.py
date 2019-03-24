@@ -18,6 +18,10 @@ import threading
 from sgtk.platform.qt import QtCore, QtGui
 from .ui.dialog import Ui_Dialog
 
+# standard toolkit logger
+logger = sgtk.platform.get_logger(__name__)
+
+
 def show_dialog(app_instance):
     """
     Shows the main dialog window.
@@ -51,6 +55,9 @@ class AppDialog(QtGui.QWidget):
         # most of the useful accessors are available through the Application class instance
         # it is often handy to keep a reference to this. You can get it via the following method:
         self._app = sgtk.platform.current_bundle()
+        
+        # logging happens via a standard toolkit logger
+        logger.info("Launching Starter Application...")
         
         # via the self._app handle we can for example access:
         # - The engine, via self._app.engine
