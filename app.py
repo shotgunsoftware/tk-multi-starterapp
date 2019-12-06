@@ -13,7 +13,7 @@ from sgtk.platform import Application
 
 class StgkStarterApp(Application):
     """
-    The app entry point. This class is responsible for intializing and tearing down
+    The app entry point. This class is responsible for initializing and tearing down
     the application, handle menu registration etc.
     """
     
