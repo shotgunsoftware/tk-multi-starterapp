@@ -3,7 +3,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Linting](https://img.shields.io/badge/PEP8%20by-Hound%20CI-a873d1.svg)](https://houndci.com)
 
-# Welcome to the Shotgun Pipeline Toolkit Starter App!
+# Welcome to the ShotGrid Pipeline Toolkit Starter App!
 
 This app serves as a quick way to get started when doing Toolkit App development.
 If you want to get up and running quickly, follow these simple steps:
@@ -14,9 +14,9 @@ This repo has got several branches, illustrating slightly different workflows:
 
 - the `master` branch contains a standard multi app which runs in all engines.
 - the `shotgun_multi_select` branch shows how to get started if you want to create
-  a *shotgun specific* app where you can select multiple objects in Shotgun and
+  a *shotgun specific* app where you can select multiple objects in ShotGrid and
   pass this selection into the app.
-- the `shotgun_model_delegate` branch illustrates how to use the Shotgun MVC model
+- the `shotgun_model_delegate` branch illustrates how to use the ShotGrid MVC model
   for efficient data retrieval and the toolkit widget delegate system for display of content.
 
 ## Step 2. Fork this Repository!
@@ -31,7 +31,7 @@ if you are working on a rigging tool in maya, you may want to name it `tk-maya-c
 
 ### Create a Dev Area
 Now, first things first - before starting development, let's install the App. First, create a
-development sandbox for your project by going to the pipeline configurations page in Shotgun
+development sandbox for your project by going to the pipeline configurations page in ShotGrid
 and click select "Clone" on the menu when right clicking on the primary pipeline configuration.
 This will give you a private place to do development and you wont be disturbing the production.
 
@@ -52,7 +52,7 @@ when working with Assets, the environment is called `asset_step`.
 This will find the latest git tag and install that into your setup. If you want more information
 about how the install_app command works, just run it without any options.
 
-Now, to test that the App was installed correctly, go to a Shot task in Shotgun and launch maya
+Now, to test that the App was installed correctly, go to a Shot task in ShotGrid and launch maya
 from your development sandbox. Toolkit now tracks this repository and if you create new tags,
 these will be detected by Toolkit's update system.
 
