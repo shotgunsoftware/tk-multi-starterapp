@@ -14,9 +14,9 @@ This repo has got several branches, illustrating slightly different workflows:
 
 - the `master` branch contains a standard multi app which runs in all engines.
 - the `shotgun_multi_select` branch shows how to get started if you want to create
-  a *shotgun specific* app where you can select multiple objects in 
+  a *shotgun specific* app where you can select multiple objects in
   Flow Production Tracking and pass this selection into the app.
-- the `shotgun_model_delegate` branch illustrates how to use the Flow Production Tracking 
+- the `shotgun_model_delegate` branch illustrates how to use the Flow Production Tracking
   MVC model for efficient data retrieval and the toolkit widget delegate system for display
   of content.
 
@@ -34,7 +34,7 @@ if you are working on a rigging tool in maya, you may want to name it `tk-maya-c
 Now, first things first - before starting development, let's install the App. First, create a
 development sandbox for your project by going to the pipeline configurations page in
 Flow Production Tracking and click select "Clone" on the menu when right clicking on the primary
-pipeline configuration. This will give you a private place to do development and you wont be 
+pipeline configuration. This will give you a private place to do development and you wont be
 disturbing the production.
 
 ### Install the new repository
