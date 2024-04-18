@@ -1,4 +1,4 @@
-[![Python 2.7 3.7](https://img.shields.io/badge/python-2.7%20%7C%203.7-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.11%20%7C%203.10%20%7C%203.9%20%7C%203.7-blue.svg)](https://www.python.org/)
 [![Build Status](https://dev.azure.com/shotgun-ecosystem/Toolkit/_apis/build/status/Apps/tk-multi-starterapp?branchName=master)](https://dev.azure.com/shotgun-ecosystem/Toolkit/_build/latest?definitionId=57&branchName=master)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Linting](https://img.shields.io/badge/PEP8%20by-Hound%20CI-a873d1.svg)](https://houndci.com)
@@ -14,7 +14,7 @@ This repo has got several branches, illustrating slightly different workflows:
 
 - the `master` branch contains a standard multi app which runs in all engines.
 - the `shotgun_multi_select` branch shows how to get started if you want to create
-  a *shotgun specific* app where you can select multiple objects in
+  a *Flow Production Tracking Toolkit specific* app where you can select multiple objects in
   Flow Production Tracking and pass this selection into the app.
 - the `shotgun_model_delegate` branch illustrates how to use the Flow Production Tracking
   MVC model for efficient data retrieval and the toolkit widget delegate system for display
